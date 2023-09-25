@@ -12,9 +12,8 @@ import '@dpc-sdp/ripple-ui-core/style/components'
 import HomeBanner from '@/components/HomeBanner.vue'
 import router from '@/router'
 
-let i = 0
-const menu = router.options.routes.map(route => ({
-  id: i++,
+const menu = router.options.routes.map((route: any, i) => ({
+  id: i,
   text: `${route.name[0].toUpperCase()}${route.name.slice(1)}`,
   url: route.path
 }))
@@ -54,7 +53,7 @@ const social = {
     </template>
     <template #aboveBody="{ hasBreadcrumbs }">
       <slot name="aboveBody" :hasBreadcrumbs="hasBreadcrumbs">
-        <HomeBanner v-bind="$route.matched[0].props.default.banner" />
+        <HomeBanner v-bind="$route.meta.banner" />
       </slot>
     </template>
     <template #body="{ hasSidebar = $route.path !== '/' }">
