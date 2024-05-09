@@ -6,7 +6,7 @@ import { RplButton, RplPromoCard, RplTextLink, RplPageComponent } from '@dpc-sdp
   <main>
     <h2 class="rpl-type-h2">Home Page</h2>
     <RplPageComponent>
-      <p class="rpl-type-p">Here's an example of a homepage, using components from <code>ripple-ui-core</code>. There is also an <RplTextLink href="/about">About</RplTextLink> page.</p>
+      <p class="rpl-type-p">Here's an example of a homepage, using components from <code>ripple-ui-core</code>. There is also an <RplTextLink href="./about">About</RplTextLink> page.</p>
     </RplPageComponent>
     <RplPageComponent class="rpl-grid">
       <RplPromoCard class="rpl-col-12 rpl-col-6-m rpl-col-4-l" :highlight="true">

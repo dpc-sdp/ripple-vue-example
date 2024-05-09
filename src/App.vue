@@ -12,10 +12,12 @@ import '@dpc-sdp/ripple-ui-core/style/components'
 import HomeBanner from '@/components/HomeBanner.vue'
 import router from '@/router'
 
+const BASE_URL = import.meta.env.BASE_URL
+
 const menu = router.options.routes.map((route: any, i) => ({
   id: i,
   text: `${route.name[0].toUpperCase()}${route.name.slice(1)}`,
-  url: route.path
+  url: BASE_URL.slice(0,-1) + route.path
 }))
 
 const social = {
@@ -39,7 +41,7 @@ const social = {
             href: '/'
           }"
           :secondaryLogo="{
-            src: '/assets/logo.svg',
+            src: `${BASE_URL}assets/logo.svg`,
             altText: 'Example'
           }"
           :showQuickExit="false"
